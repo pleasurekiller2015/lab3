@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Магазин Гаджетів</title>
+    <link rel="stylesheet" href="styles/styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+        <ul>
+            <li><a href="index.html" id="heroLink">Головна</a></li>
+            <li><a href="info.html" id="infoLink">Info</a></li>
+            <li><a href="contacts.html" id="contactsLink">Контакти</a></li>
+        </ul>
+    </div>
+    <div id="menuButton" class="menu-button" onclick="openMenu()">
+        <div class="burger-icon"></div>
+        <div class="burger-icon"></div>
+        <div class="burger-icon"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="catalog">
+                <a href="catalog.html">
+                    <button id="catalog-button">
+                        <i class="icon-catalog"></i> <span id="catalogText">Каталог</span>
+                    </button>
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Я шукаю..." id="searchPlaceholder" />
+                <button type="submit" id="searchButton">Знайти</button>
+            </div>
+            <div class="language-switch">
+                <select name="language" id="language" onchange="switchLanguage()">
+                    <option value="ua">UA</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+            <div class="cart">
+                <button id="cart-button">
+                    <i class="icon-cart"></i> <span id="cartText">Кошик</span> 
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2 id = "contact">Контакти</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 id = "contactus">Зв'яжіться з нами</h3>
+                    <p id = "constr">Ми завжди раді допомогти вам! Заповніть форму або зв'яжіться з нами за наведеними контактами.</p>
+                    <ul>
+                        <li><strong id = "num">Телефон:</strong> +380 123 456 789</li>
+                        <li><strong>Email:</strong> pleasurekiller2015@info.ua</li>
+                        <li><strong id = "adr">Адреса:</strong id = "street1"> м. Київ, вул. Прикладна, 12</li>
+                    </ul>
+                    <div class="social-media">
+                        <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+                        <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="submit_contact_form.php" method="POST">
+                        <div class="form-group">
+                            <label for="name" id = "namef">Ваше ім'я</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" id = "emailf">Ваш email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" id = "mess">Повідомлення</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-btn" id = "sendmess">Надіслати повідомлення</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="global-cart" style="display: none;" id="globalCart">
+        <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+        <h2 id="cartTitle">Кошик</h2>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total" id="cartTotal">
+            <span id="totalcart">Всього:</span>
+            <span class="total-price">₴0</span>
+        </div>
+        <button class="checkout" id="checkoutButton">Оформити замовлення</button>
+    </div>
+    <footer>
+        <div class="container">
+            <p id="copyright"> 2024 Магазин Гаджетів. Всі права захищено.</p>
+            <div class="social-media">
+                <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" title="Повернутися вгору">&#9650;</button>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна сторінка - Магазин Гаджетів</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+        <ul>
+            <li><a href="index.html" id="heroLink">Головна</a></li>
+            <li><a href="info.html" id="infoLink">Інформація</a></li>
+            <li><a href="contacts.html" id="contactsLink">Контакти</a></li>
+        </ul>
+    </div>
+    <div id="menuButton" class="menu-button" onclick="openMenu()">
+        <div class="burger-icon"></div>
+        <div class="burger-icon"></div>
+        <div class="burger-icon"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="index.html"> 
+                    <img src="images/logo.png" alt="Логотип" id="logo">
+                </a>
+            </div>
+            <div class="catalog">
+                <a href="catalog.html">
+                    <button id="catalog-button">
+                        <i class="icon-catalog"></i> <span id="catalogText">Каталог</span>
+                    </button>
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Я шукаю..." id="searchPlaceholder" />
+                <button type="submit" id="searchButton">Знайти</button>
+            </div>
+            <div class="language-switch">
+                <select name="language" id="language" onchange="switchLanguage()">
+                    <option value="ua">UA</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+            <div class="cart">
+                <button id="cart-button">
+                    <i class="icon-cart"></i> <span id="cartText">Кошик</span> 
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <img src="images/hero-image.png" alt="Гаджети на будь-який смак" class="hero-image" id="heroImage">
+        <h1 id="heroTitle">Знайдіть ваш ідеальний гаджет сьогодні</h1>
+        <p id="heroDescription">Від смартфонів до ноутбуків, знайдіть найновіші гаджети за вигідними цінами</p>
+        <a href="catalog.html" class="cta-btn" id="catalogLinkButton">Переглянути каталог</a>
+    </section>
+
+    <section class="catalog-section">
+        <h2 id="productsTitle">Наші продукти</h2>
+        <div class="products-grid">
+            <div class="product-card" id="product1">
+                <img src="images/product1.webp" alt="Продукт 1" class="productImage">
+                <h3 id="product1Title">Смартфон</h3>
+                <p class="price" id="product1Price">₴ 9,999</p>
+                <button class="add-to-cart" id="addToCartButton1">Додати до кошика</button>
+            </div>
+            <div class="product-card" id="product2">
+                <img src="images/product2.webp" alt="Продукт 2" class="productImage">
+                <h3 id="product2Title">Ноутбук</h3>
+                <p class="price" id="product2Price">₴ 19,999</p>
+                <button class="add-to-cart" id="addToCartButton2">Додати до кошика</button>
+            </div>
+            <div class="product-card" id="product3">
+                <img src="images/product3.jpg" alt="Продукт 3" class="productImage">
+                <h3 id="product3Title">Планшет</h3>
+                <p class="price" id="product3Price">₴ 5,999</p>
+                <button class="add-to-cart" id="addToCartButton3">Додати до кошика</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="global-cart" style="display: none;" id="globalCart">
+        <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+        <h2 id="cartTitle">Кошик</h2>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total" id="cartTotal">
+            <span id="totalcart">Всього:</span>
+            <span class="total-price">₴0</span>
+        </div>
+        <button class="checkout" id="checkoutButton">Оформити замовлення</button>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p id="copyright"> 2024 Магазин Гаджетів. Всі права захищено.</p>
+            <div class="social-media">
+                <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" title="Повернутися вгору">&#9650;</button>
+    <script src="script.js"></script>
+</body>
+</html>
