@@ -56,9 +56,9 @@ const translations = {
     en: {
         whyChooseUsTitle: "Why Choose Us?",
         whyChooseUsList: [
-            "Wide selection of modern gadgets.",
-            "Quality guarantee on all products.",
-            "Free delivery across the country."
+            "Wide selection of modern gadgets",
+            "quality guarantee on all products",
+            "free delivery across the country"
         ],
         contact: "Our contacts",
         copyright: "2024 Gadget Store. All rights reserved.",
